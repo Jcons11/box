@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Deductions</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+<body>
+     <div class="main-container">
+          <div class="sidebar">
+               <div class="sidebar__logo">
+                   <div class="logo"></div>
+                   <h3>JDTV</h3>
+               </div>
+               <nav>
+                   <ul>
+                       <li class="li__records">
+                           <a href="#" class="">DASHBOARD</a>
+                       </li>
+                       <li class="li__records active">
+                           <a href="secdashboard.php" class="active">Attendance</a>
+                       </li>
+                       
+                       <li>
+                         <a href="employeelist.php" class ="active">Employees</a>
+                         <ul>
+                             <li><a href="employeelist.php">List of Employees</a></li>
+                             <li><a href="empschedule.php">Schedules</a></li>
+                             <li><a href="deductions.php">Deductions</a></li>
+                             <li><a href="violations.php">Violations</a></li>
+                         </ul>
+                       </li>
+
+                       <li class="li__report">
+                           <a href="">MANAGE REPORT</a>
+                           <ul>
+                               <li><a href="#">Leave</a></li>
+                               <li><a href="#">Remarks</a></li>
+                           </ul>
+                       </li>
+                   </ul>
+               </nav>
+               <div class="sidebar__logout">
+                   <div class="li li__logout"><a href="#">LOGOUT</a></div>
+               </div>
+          </div>
+
+          <div class="page-info-head">
+               Secretary
+          </div>
+
+          <div class="user-info">
+               <a href="UserProfile/userprofile_editdetails.html">[ Profile ]</a>
+              <p>Profile Name</p>
+              <div class="user-profile">
+              </div>
+          </div>
+
+          <div class="manual-payroll_header">
+               <h2>Deductions</h2>
+          </div>
+
+          <div class="emp-deductions">
+               <div class="emp-deductions__header">
+                    <h2>Generate Deductions</h2>
+               </div>
+
+               <div class="emp-deductions__form">
+                    <form action="" method="post">
+                         <div class="detail">
+                              <label for="">Deductions :</label> <br>
+                              <select name="" id="">
+                                   <option value="">Select Deduction</option>
+                                   <option value="">SSS</option>
+                                   <option value="">Pag-ibig</option>
+                                   <option value="">Philhealth</option>
+                              </select>
+                         </div>
+
+                         <div class="detail">
+                              <label for="">Position :</label> <br>
+                              <select name="" id="">
+                                   <option value="">Select Position</option>
+                                   <option value="">Security Officer</option>
+                                   <option value="">OIC</option>
+                              </select>
+                         </div>
+
+                         <div class="detail">
+                              <label for="">Duty :</label> <br>
+                              <select name="" id="">
+                                   <option value="">Select Duty Duration</option>
+                                   <option value="">8 Hours</option>
+                                   <option value="">12 Hours</option>
+                              </select>
+                         </div>
+
+                         <button type="submit">
+                              <a href="#">Generate</a>
+                         </button>
+                    </form>
+               </div>
+          </div>
+
+          <div class="cashadvance">
+               <div class="cashadvance__header">
+                    <h2>Cash Advance</h2>
+               </div>
+               <form action="" method="post">
+                    <div class="cashadvance__form">
+                         <div class="detail">
+                              <label for="">Employee ID :</label>
+                              <!--php here <?php $sql ="SELECT empId,firstname,lastname FROM emp_info;";$stmt = $payroll->con()->prepare($sql); $stmt->execute(); $row = $stmt->fetchall(); echo "<select id= empid name=empid >"; foreach($row as $rows){echo "<option value=$rows->empId> $rows->empId $rows->firstname $rows->lastname</option>";}; ?><?php echo "</select>"; ?>-->
+                              <input type="number">
+                         </div>
+
+                         <div class="detail">
+                              <label for="">Amount :</label>
+                              <input type="number" placeholder="Php">
+                         </div>
+                    </div>
+
+                    <button type="submit">
+                         <a href="#">Generate</a>
+                    </button>
+               </form>
+          </div>
+
+
+          <div class="generated-deduction-table">
+               <table>
+                    <tr>
+                         <th>Deductions</th>
+                         <th>Position</th>
+                         <th>Cut-off</th>
+                         <th>Duty</th>
+                         <th>Amount</th>
+                    </tr>
+
+                    <tr>
+                        <!--php here displaydeduction();--> 
+                    </tr>
+               </table>
+          </div>
+
+          <div class="generated-cashadvance">
+               <table>
+                    <tr>
+                         <th>Name</th>
+                         <th>Date</th>
+                         <th>Amount</th>
+                    </tr>
+
+                    <tr>
+                        <!--php here displaydeduction();--> 
+                    </tr>
+               </table>
+          </div>
+     </div>
+</body>
+</html>
